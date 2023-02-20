@@ -15,8 +15,7 @@ Definition = Pipeline script
 
 
 Enter script
-    
-    
+        
 
 Linux
 ```
