@@ -5,7 +5,7 @@ pipeline {
             steps {
                 
                 echo ' welcome to github pipeline'
-                sh 'python3 -version'
+                sh 'python3 --version'
             }
         }
     }
