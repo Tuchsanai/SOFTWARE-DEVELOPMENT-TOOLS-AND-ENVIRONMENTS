@@ -18,8 +18,8 @@ Enter script
     
     
 
-    Linux
-    ```
+Linux
+```
    pipeline {
    agent any
     stages {
@@ -32,7 +32,7 @@ Enter script
         }
     }
 }
-    ```
+```
 
 Output:
 
