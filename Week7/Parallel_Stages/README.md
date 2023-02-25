@@ -8,48 +8,48 @@ pipeline {
     stages {
         stage('pre -build') {
             steps {
-                sh 'echo Pre-build'
+                bat 'echo Pre-build'
             }
         }
         stage('build') {
             steps {
-                sh 'echo Build in progress.'
+                bat 'echo Build in progress.'
             }
         }
         stage('Unit tests') {
             steps {
-                sh 'echo Running unit tests'
+                bat 'echo Running unit tests'
             }
         }
         stage('deploy') {
             steps {
-                sh 'echo Deploying build'
+                bat 'echo Deploying build'
             }
         }
         stage('Regression tests') {
-        
+            steps {
                 parallel{
                         stage('chrome') {
                             steps {
-                                sh 'echo Running E2E tests on chrome'
+                                bat 'echo Running E2E tests on chrome'
                             }
                         }
                         stage('firefox') {
                             steps {
-                                sh 'echo Running E2E tests on chrome'
+                                bat 'echo Running E2E tests on chrome'
                             }
                         }
                         stage('safari') {
                             steps {
-                                sh 'echo Running E2E tests on chrome'
+                                bat 'echo Running E2E tests on chrome'
                             }
                         }
                 }
-            
+            }
         }
         stage('Release to prod') {
             steps {
-                sh 'echo Releasing to prod'
+                bat 'echo Releasing to prod'
             }
         }
     }
