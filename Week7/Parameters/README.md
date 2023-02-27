@@ -6,8 +6,8 @@ A very rich feature of jenkins is that jobs can be parameterized. In pipelines, 
 pipeline {
     agent any
     parameters {
-        string(name: 'NAME', defaultValue: 'Uthred', description: 'Enter your name')
-        choice(name: 'CITY', choices: ['Bebbanburg', 'Mercia', 'East Anglia'], description: 'Choose your city')
+        string(name: 'NAME', defaultValue: 'Tuchsanai', description: 'Enter your name')
+        choice(name: 'CITY', choices: ['Bangkok',Bebbanburg', 'Mercia', 'East Anglia'], description: 'Choose your city')
     }
     stages {
         stage('Example') {
