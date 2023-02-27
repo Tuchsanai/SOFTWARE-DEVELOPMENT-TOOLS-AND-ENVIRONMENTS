@@ -19,7 +19,7 @@ pipeline {
 }
 ```
 
-another Example of parameters
+Another Example of parameters
 
 ```
 pipeline {
