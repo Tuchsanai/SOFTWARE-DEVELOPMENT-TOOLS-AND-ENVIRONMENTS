@@ -7,7 +7,7 @@ pipeline {
     agent any
     parameters {
         string(name: 'NAME', defaultValue: 'Tuchsanai', description: 'Enter your name')
-        choice(name: 'CITY', choices: ['Bangkok',Bebbanburg', 'Mercia', 'East Anglia'], description: 'Choose your city')
+        choice(name: 'CITY', choices: ['Bangkok','Bebbanburg', 'Mercia', 'East Anglia'], description: 'Choose your city')
     }
     stages {
         stage('Example') {
