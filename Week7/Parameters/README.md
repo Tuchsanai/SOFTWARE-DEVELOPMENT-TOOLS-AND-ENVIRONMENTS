@@ -13,6 +13,7 @@ pipeline {
         stage('Example') {
             steps {
                 echo "Hello ${params.NAME} of ${params.CITY}"
+                
             }
         }
     }
