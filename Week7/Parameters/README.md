@@ -12,14 +12,14 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                echo "Hello ${NAME} of ${CITY}"
+                echo "Hello ${params.NAME} of ${params.CITY}"
             }
         }
     }
 }
 ```
 
-Another Example of parameters
+nother Example of parameters
 
 ```
 pipeline {
@@ -38,15 +38,15 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                echo 'Hello ${PERSON}'
+                echo "Hello ${params.PERSON}"
 
-                echo 'Biography: ${BIOGRAPHY}'
+                echo "Biography: ${params.BIOGRAPHY}"
 
-                echo 'Toggle: ${TOGGLE}'
+                echo "Toggle: ${params.TOGGLE}"
 
-                echo 'Choice: ${CHOICE}'
+                echo "Choice: ${params.CHOICE}"
 
-                echo 'Password: ${PASSWORD}'
+                echo "Password: ${params.PASSWORD}"
             }
         }
     }
