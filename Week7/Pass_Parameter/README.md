@@ -19,7 +19,7 @@ pipeline {
 ```
 
 # Master
-
+```
 pipeline {
     agent any
 
@@ -30,8 +30,7 @@ pipeline {
                 echo 'Start Program'
             }
         }
-        
-        
+
         stage('Tigger the Slave Jobs') {
             steps {
                 echo 'Start Trigger'
@@ -40,7 +39,6 @@ pipeline {
         }
     }
 }
-```
 
 ```
 
