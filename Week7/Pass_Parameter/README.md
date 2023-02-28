@@ -20,7 +20,29 @@ pipeline {
 
 # Master
 
+pipeline {
+    agent any
 
+    stages {
+        
+        stage('Welcome to master'){
+            steps{
+                echo 'Start Program'
+            }
+        }
+        
+        
+        stage('Tigger the Slave Jobs') {
+            steps {
+                echo 'Start Trigger'
+                build job: 'slave', parameters: [string(name: 'NAME', value: 'Tuchsanai'), string(name: 'CITY', value: 'Mercia')]
+            }
+        }
+    }
+}
+```
+
+```
 
 
 To see complete list of parameters, you may refer https://www.jenkins.io/doc/book/pipeline/syntax/#parameters
