@@ -1,4 +1,6 @@
 
+![Demo](./mydemo2.jpg)
+
 ## 1 Git clone
 
 ```
