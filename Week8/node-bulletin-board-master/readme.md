@@ -4,20 +4,21 @@
 ```
 git clone https://github.com/Tuchsanai/devopt_week8.git
 
-cd devopt_week8/node-bulletin-board-master
+cd devopt_week8/node-bulletin-board-master/bulletin-board-app
 
 ```
 
 ## 3 Build Docker image
 ```
 
-docker build --tag bulletinboard:1.0
+docker build -t bulletinboard:1.0 .
+
 
 ```
 
 ## 3 Run Nginx with port mapping and volume mapping
 
 ```
-docker run -p 8005:8080 -d --name bb bulletinboard:1.0
+docker run -p 8085:8080 -d --name bb bulletinboard:1.0
 
 ```
