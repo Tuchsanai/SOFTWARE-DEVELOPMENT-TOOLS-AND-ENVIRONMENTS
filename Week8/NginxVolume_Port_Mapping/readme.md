@@ -1,0 +1,1 @@
+docker run -d -p 8080:80 -v ${PWD}/web_demo:/usr/share/nginx/html:ro  nginx
