@@ -1,6 +1,9 @@
 from fastapi import FastAPI,Query
-
 from pydantic import BaseModel
+
+
+
+
 
 app = FastAPI()
 
@@ -48,3 +51,5 @@ def search_books(title: str = Query(None), author: str = Query(None)):
 
     # Return the filtered list of books
     return {"books": books_filtered}
+
+
