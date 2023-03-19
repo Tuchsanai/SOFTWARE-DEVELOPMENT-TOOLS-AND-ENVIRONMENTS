@@ -52,3 +52,10 @@ chmod +x install-git-docker.sh
 ```
 ./install-git-docker.sh
 ```
+
+# Allow to run docker without sudo
+
+```
+sudo usermod -aG docker $USER
+
+```
