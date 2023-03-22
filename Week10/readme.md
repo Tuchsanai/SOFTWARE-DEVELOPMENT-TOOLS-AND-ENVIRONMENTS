@@ -104,7 +104,7 @@ chmod +x install_Jenkins.sh
 ## 8 .Run the install.sh script:
 
 ```
-./install.sh
+./install_git_docker_dockercompose.sh
 
 ```
 
