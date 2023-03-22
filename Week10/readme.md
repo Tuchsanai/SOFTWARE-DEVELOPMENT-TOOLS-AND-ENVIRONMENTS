@@ -101,11 +101,9 @@ Ctrl+X, then Y, then Enter.
 ## 7. Make the install.sh script executable:
 ```
 chmod +x install_git_docker_dockercompose.sh
-```
-
-```
 chmod +x install_Jenkins.sh
 ```
+
 
 
 ## 8 .Run the install.sh script:
