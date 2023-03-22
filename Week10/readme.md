@@ -10,31 +10,38 @@ nano install_git_docker_dockercompose.sh
 ### 2. Add the following content to install_git_docker_docker_compose.sh :
 
 ```
+
 #!/bin/bash
 
-# Update the package list
-sudo apt update
+# Update the package index and install required dependencies
+sudo apt-get update
+sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
 
-# Install Git
-sudo apt install git -y
+# Add Docker's official GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
-# Install Docker
-sudo apt install docker.io -y
+# Set up the stable Docker repository
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Update the package index and install Docker
+sudo apt-get update
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
 # Add the current user to the Docker group
-sudo usermod -aG docker ${USER}
+sudo usermod -aG docker $USER
+
+# Enable and start the Docker service
+sudo systemctl enable docker
+sudo systemctl start docker
 
 # Install Docker Compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-
-# Make the Docker Compose binary executable
 sudo chmod +x /usr/local/bin/docker-compose
 
-# Enable Docker service
-sudo systemctl enable docker.service
+# Print Docker and Docker Compose versions
+docker --version
+docker-compose --version
 
-# Enable Docker Compose
-sudo systemctl enable docker-compose.service
 
 
 ```
