@@ -100,8 +100,11 @@ Ctrl+X, then Y, then Enter.
  
 ## 7. Make the install.sh script executable:
 ```
-chmod +x install_git_docker_dockercompose.sh
 chmod +x install_Jenkins.sh
+```
+
+```
+chmod +x install_git_docker_dockercompose.sh
 ```
 
 
@@ -124,6 +127,9 @@ chmod +x install_Jenkins.sh
  ```
 sudo usermod -aG docker $USER
 sudo groupadd docker
+```
+
+ ```
 sudo usermod -aG docker jenkins
 sudo groupadd jenkins
 ```
@@ -140,4 +146,12 @@ http://<your_instance_ip>:8080
 
 ```
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
+
+## 12. Run the following command to install the Docker plugin:
+
+```
+sudo chmod 666 /var/run/docker.sock 
+
 ```
