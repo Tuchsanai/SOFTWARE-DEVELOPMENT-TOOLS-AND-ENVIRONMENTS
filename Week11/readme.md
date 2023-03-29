@@ -88,35 +88,25 @@ nano minikube-kubectl-install.sh
 ```
 #!/bin/bash
 
-# Update apt package index
-sudo apt update
-
-# Install dependencies for Minikube
-sudo apt install -y apt-transport-https ca-certificates curl gnupg lsb-release
-
-# Add Minikube repository key
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-
-# Add Minikube repository
-echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
-
-# Update apt package index again
-sudo apt update
-
 # Install Minikube
-sudo apt install -y minikube
+
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 # Install kubectl
-sudo snap install kubectl --classic
 
-# Start Minikube
-minikube start
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 
-# Verify kubectl version
-kubectl version
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
+sudo usermod -aG docker $USER && newgrp docker
 
 ```
+
+
+
+
 
 ## Save and close the file.
 ```
@@ -135,3 +125,20 @@ chmod +x minikube-kubectl-install.sh
 
 ```
 
+
+## 10. Start Minikube and check the status:
+
+```
+minikube start 
+
+```
+
+
+```
+minikube status 
+
+```
+
+
+```
+kubectl version
