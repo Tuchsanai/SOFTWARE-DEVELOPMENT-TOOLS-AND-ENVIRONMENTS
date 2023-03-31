@@ -28,7 +28,7 @@ kubectl get pods --all-namespaces
 ##### Get a list of all pods in the kube-system namespace:
 
 ```
-kubectlget pods -n kube-system
+kubectl get pods -n kube-system
 ```
 
 ##### Get a list of all services in the kube-system namespace:
