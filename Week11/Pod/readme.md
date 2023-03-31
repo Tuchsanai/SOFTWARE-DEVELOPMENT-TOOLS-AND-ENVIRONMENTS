@@ -42,3 +42,18 @@ kubectl apply -f nginx-pod.yaml
 ```
 kubectl get pods
 ```
+
+### 6. Access the Nginx pod:
+### Since the Nginx pod is running inside the Kubernetes cluster, you can access it using port forwarding. This will allow you to temporarily expose the pod on a local port on your machine.
+```
+kubectl port-forward pod/nginx-lab 8081:80
+
+```
+
+### 7. Clean up:
+### When you're finished with the lab, you can delete the Nginx pod to free up resources:
+
+```
+kubectl delete pod nginx-lab
+
+```
