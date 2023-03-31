@@ -19,7 +19,14 @@ kubectl get namespace
 
 ## Get information about resources in a specific namespace:
 
+##### To get all pods across all namespaces in Kubernetes 
+
+```
+kubectl get pods --all-namespaces
+```
+
 ##### Get a list of all pods in the kube-system namespace:
+
 ```
 kubectlget pods -n kube-system
 ```
@@ -28,7 +35,6 @@ kubectlget pods -n kube-system
 ``` 
 kubectl get services -n kube-system
 ```
-
 
 ##### Get a list of all deployments in the kube-system namespace:
 ``` 

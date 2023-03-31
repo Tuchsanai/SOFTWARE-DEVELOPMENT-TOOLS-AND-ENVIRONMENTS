@@ -29,3 +29,16 @@ spec:
 ```
 Ctrl+X, then Y, then Enter.
 ```
+
+## 4. Create the Nginx pod
+
+```
+kubectl apply -f nginx-pod.yaml
+
+```
+
+## 5. Check the status of the pod
+
+```
+kubectl get pods
+```
