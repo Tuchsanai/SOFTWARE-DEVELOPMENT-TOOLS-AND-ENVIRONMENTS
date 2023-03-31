@@ -1,10 +1,11 @@
 
-Create a new file called nginx-pod.yaml with the following content:
+### 1 Create a new file called nginx-pod.yaml with the following content:
 
 ```
 nano nginx-pod.yaml
 ```
 
+### 2 Add the following content
 
 ```
 apiVersion: v1
@@ -20,4 +21,11 @@ spec:
     ports:
     - containerPort: 80
 
+```
+
+
+
+## 3.Save and close the file.
+```
+Ctrl+X, then Y, then Enter.
 ```
